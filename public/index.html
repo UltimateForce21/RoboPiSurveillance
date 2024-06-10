@@ -42,7 +42,7 @@
       const formData = new FormData(this);
       fetch('/text', {
         method: 'POST',
-        body: formData,
+        body: new URLSearchParams(formData),
       })
       .then(response => response.text())
       .then(data => {
