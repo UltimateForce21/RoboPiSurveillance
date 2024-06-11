@@ -8,10 +8,19 @@
     <style>
       body { padding: 2rem; }
       .status { margin-top: 1rem; }
+
+      /* Additional inline styles for the header */
+      header {
+        
+        color: red; /* Red text color */
+      }
     </style>
   </head>
   <body>
-    <h1>Control the Car</h1>
+    <header>
+      <h1>🍓Raspberry π Surveillance Interface</h1>
+    </header>
+    
     <p>Use the arrow keys to control the car. Press a key to start moving, release it to stop.</p>
     <div class="status">
       <p><strong>Status:</strong> <span id="status">Disconnected</span></p>
@@ -22,7 +31,7 @@
       const lastInputElement = document.getElementById('last-input');
 
       // Connect to the WebSocket server
-      const ws = new WebSocket('ws://raspberrypi:3000');
+      const ws = new WebSocket('ws://localhost:3000');
 
       ws.onopen = () => {
         statusElement.textContent = 'Connected';
