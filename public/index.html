@@ -22,7 +22,7 @@
       const lastInputElement = document.getElementById('last-input');
 
       // Connect to the WebSocket server
-      const ws = new WebSocket('ws://localhost:3000');
+      const ws = new WebSocket('ws://raspberrypi:3000');
 
       ws.onopen = () => {
         statusElement.textContent = 'Connected';
